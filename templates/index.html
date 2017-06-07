@@ -1,0 +1,5 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>The table has {{ length }} rows.</p>
+{{ dataframe|safe }}
+{% endblock %}
