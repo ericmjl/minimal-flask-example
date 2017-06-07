@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<p>Here's a display of the Iris sample dataset from Bokeh's sample data.</p>
+<link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.css"
+    rel="stylesheet" type="text/css">
+<link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.4.min.css"
+    rel="stylesheet" type="text/css">
+
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.4.min.js"></script>
+
+{{ fig_script|indent(4)|safe }}
+{{ fig_div|safe }}
+{% endblock %}
