@@ -18,10 +18,12 @@ This outline assumes that you have your project already hosted on [GitHub], and 
     1. **Deployment method**: GitHub
     1. **App connected to GitHub**: Put in your project repository name.
     1. **Automatic deploys**: Select "master" as the branch to deploy from. 
+1. Install the [Heroku CLI].
 1. Create your [procfile]. For more information, click the link to read more. If you only need a refresher, read the **Procfile** section below.
 1. Create a `runtime.txt` file, which specifies the Python version for Heroku to use.
 1. Push your app to GitHub, and wait for it to deploy on Heroku!
 
+[Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
 [Heroku]: https://www.heroku.com
 [procfile]: https://devcenter.heroku.com/articles/procfile
 
