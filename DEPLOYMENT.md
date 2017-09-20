@@ -22,14 +22,26 @@ This outline assumes that you have your project already hosted on [GitHub], and 
 1. Confirm that there is a `heroku` remote by running the command `$ git remote -v`.
 1. Create your [procfile]. For more information, click the link to read more. If you only need a refresher, read the **Procfile** section below.
 1. Create a `runtime.txt` file, which specifies the Python version for Heroku to use.
-1. Run `git push heroku master` 
+1. Run `git push heroku master` to deploy your app to the web!
 
+## Other Configurations
 
-1. Configure your project in the following ways:
-    1. **Deployment method**: GitHub
-    1. **App connected to GitHub**: Put in your project repository name.
-    1. **Automatic deploys**: Select "master" as the branch to deploy from. 
-1. Push your app to GitHub, and wait for it to deploy on Heroku!
+You can do other configurations on your web [dashboard].
+
+[dashboard]: https://dashboard.heroku.com/apps
+
+### Deployment from GitHub
+
+1. Open your project. 
+1. Click on the `Deploy` tab.
+1. Look for "Deployment method". Click on "GitHub".
+1. If you haven't already connected GitHub to your Heroku account, do so now.
+1. The bottom of the page will change to "Connect to GitHub". Type in the name of your repository name and click "Search".
+1. When your repository name shows up, click "Connect" next to it.
+1. The bottom of the page will now show, "Automatic deploys". Make sure the `master` branch is selected, and that you have clicked on "Enable Automatic Deploys".
+1.  
+
+Now, each time you git push to GitHub, Heroku will automatically pull in your GitHub repository and deploy it. No need to type a separate `git push heroku master` command anymore - laziness at its best!
 
 [Heroku CLI]: https://devcenter.heroku.com/articles/getting-started-with-python#set-up
 [Heroku]: https://www.heroku.com
