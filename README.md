@@ -21,3 +21,6 @@ Key concepts here:
 - Marking strings as safe to render (see above)
 - Refactoring granular logic into a utility function, so that only application "business logic" remains.
 
+# notes
+
+- Watch out for BokehJS, BokehCSS and Bokeh.py versioning. Make sure the Bokeh versions in `data.html` are the same as the Bokeh version installed locally.
