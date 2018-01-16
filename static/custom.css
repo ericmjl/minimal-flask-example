@@ -1,0 +1,5 @@
+/* Enables horizontal scrolling in any element that has the "container" CSS class. */
+.container {
+    overflow-x: auto;
+    overflow-y: auto;
+}
