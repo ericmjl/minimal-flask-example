@@ -8,5 +8,5 @@ dependencies:
 - jupyter
 - jupyterlab
 - flask
-- bokeh=0.12.13
+- bokeh
 - pandas
