@@ -4,6 +4,7 @@ from bokeh.sampledata.iris import flowers
 from bokeh.plotting import figure
 from bokeh.embed import components
 from flask import Flask, render_template
+import bokeh
 
 app = Flask(__name__)
 
@@ -26,7 +27,8 @@ def main():
     figure = make_plot()
     fig_script, fig_div = components(figure)
 
-    return render_template('data.html', fig_script=fig_script, fig_div=fig_div)
+    return render_template('data.html', fig_script=fig_script, fig_div=fig_div,
+                           bkversion=bokeh.__version__)
 
 
 if __name__ == '__main__':
