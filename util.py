@@ -1,12 +1,6 @@
-# Another example chaining Bokeh's to Flask.
-
 from bokeh.sampledata.iris import flowers
 from bokeh.plotting import figure
-from bokeh.embed import components
-from flask import Flask, render_template
-import bokeh
 
-app = Flask(__name__)
 
 def make_plot():
     colormap = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}
@@ -20,16 +14,3 @@ def make_plot():
              color=colors, fill_alpha=0.2, size=10)
 
     return p
-
-
-@app.route('/')
-def main():
-    figure = make_plot()
-    fig_script, fig_div = components(figure)
-
-    return render_template('data.html', fig_script=fig_script, fig_div=fig_div,
-                           bkversion=bokeh.__version__)
-
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5678)

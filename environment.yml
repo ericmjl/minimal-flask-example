@@ -10,3 +10,7 @@ dependencies:
 - flask
 - bokeh
 - pandas
+- pylint
+- pycodestyle
+- autopep8
+- mypy

@@ -1,0 +1,22 @@
+{% extends "layout.html.j2" %}
+{% block body %}
+
+
+<table>
+    <tr>
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+    {% for row in data %}
+        <tr>
+            {% for header in headers %}
+                <td>{{ row[header]|float|round}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+{{ dataframe|safe }}
+{% endblock %}
