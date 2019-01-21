@@ -1,4 +1,7 @@
 {% extends "layout.html.j2" %}
+
+{% block title %} DataFrame Example {% endblock %}
+
 {% block body %}
 <p>The table has {{ length }} rows.</p>
 {{ dataframe|safe }}
