@@ -1,9 +1,18 @@
 # minimal-flask-example
+
 The simplest complex example that I can think of to show main Flask app concepts.
 
-# example 1
+All examples are in `app.py`. There are 3 view functions embedded, each showing a different example of how to build Flask apps.
 
-The first example is `app.py`. In this example, I show you how to embed a `pandas.DataFrame()` table inside an HTML page served up using Flask.
+Key concepts applicable throughout:
+
+- View functions
+- Routes
+- Returning a template.
+
+## example 1
+
+The first example is under [`/df`](http://minimal-flask-table.herokuapp.com/df). In this example, I show you how to embed a `pandas.DataFrame()` table inside an HTML page served up using Flask, essentially as a dump of the table.
 
 Key concepts here:
 
@@ -12,15 +21,22 @@ Key concepts here:
 - Styling with Bootstrap CSS
 - Marking strings as safe to render: (`{{ string|safe }}`)
 
-# example 2
+## example 2
 
-The second example is `display_bokeh.py`. In this example, I show you how to embed a Bokeh plot on an HTML page served up using Flask.
+The second example is under [`/dfcustom`](http://minimal-flask-table.herokuapp.com/dfcustom). In this example, I show you how to apply custom formatting to a DataFrame rendered as an HTML table.
+
+Key concepts here, building on top of example 1:
+
+- Jinja2 syntax is very Python-like.
+- Macros behave like Python functions.
+- Looping is very Pythonic.
+
+## example 3
+
+The second example is [`/bokehplot`](http://minimal-flask-table.herokuapp.com/bokehplot). In this example, I show you how to embed a Bokeh plot on an HTML page served up using Flask.
 
 Key concepts here:
 
 - Marking strings as safe to render (see above)
 - Refactoring granular logic into a utility function, so that only application "business logic" remains.
-
-# notes
-
-- Watch out for BokehJS, BokehCSS and Bokeh.py versioning. Make sure the Bokeh versions in `data.html` are the same as the Bokeh version installed locally.
+- It is possible to cleverly pass strings around so that you can keep things like versioning automatically correct.
