@@ -1,0 +1,20 @@
+{% macro format_cell(header, row) %}
+    {% set color = '' %}
+    {% if header == 'logan_passengers' %}
+        {% if row[header] >= 3000000 %}
+            {% set color = 'red' %}
+        {% elif row[header] >= 2000000 and row[header] < 3000000%}
+            {% set color = 'yellow' %}
+        {% else %}
+            {% set color = 'green' %}
+        {% endif %}
+    {% endif %}
+    <td bgcolor="{{ color }}" align="right">
+        {% if header != 'Year_Month' %}
+
+            {{ row[header]|float|round(2)}}
+        {% else %}
+            {{ row[header] }}
+        {% endif %}
+    </td>
+{% endmacro %}

@@ -1,4 +1,5 @@
 {% extends "layout.html.j2" %}
+{% from "macros/table_format.html.j2" import format_cell %}
 
 {% block title %}Custom DataFrame Example {% endblock %}
 
@@ -12,7 +13,7 @@
     {% for row in data %}
         <tr>
             {% for header in headers %}
-                <td>{{ row[header]|float|round}}</td>
+                {{ format_cell(header, row) }}
             {% endfor %}
         </tr>
     {% endfor %}
