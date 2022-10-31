@@ -1,4 +1,4 @@
 bokeh==2.4.3
 Flask==2.2.2
-pandas==1.1.2
+pandas==1.5.1
 gunicorn==20.0.4
